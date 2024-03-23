@@ -1,0 +1,44 @@
+linters-settings:
+  govet:
+    shadow: true
+  golint:
+    min-confidence: 0.8
+  gofmt:
+    simplify: true
+  goimports:
+    local-prefixes: github.com/shosato0306
+
+linters:
+  enable:
+    - govet
+    - gosimple
+    - revive
+    - gofmt
+    - goimports
+    - errcheck
+    - staticcheck
+    - unused
+    - gocritic
+    - gocyclo
+    - ineffassign
+    - typecheck
+    - gosec
+  disable:
+    - gochecknoinits
+
+issues:
+  exclude-use-default: false
+  exclude-rules:
+    - linters: ["staticcheck"]
+      text: "exported \\w+ should have comment or be unexported"
+    - linters: ["revive"]
+      text: "exported: exported function .+ should have comment or be unexported"
+    - linters: ["revive"]
+      text: "package-comments: should have a package comment"
+  exclude-dirs:
+    - vendor
+    - third_party
+
+run:
+  deadline: 5m
+  tests: true
