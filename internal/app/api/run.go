@@ -1,17 +1,10 @@
 package api
 
-import (
-	"github.com/gin-gonic/gin"
-
-	"github.com/shosato0306/golang-ddd-boilerplate/internal/app/api/handler"
-)
-
 func Run() {
-	r := gin.Default()
+	d := Dependency{}
+	d.Inject()
 
-	r.GET("/example", handler.ExampleHandler)
-
-	err := r.Run()
+	err := routing(d)
 	if err != nil {
 		panic(err)
 	}

@@ -12,7 +12,6 @@ linters:
   enable:
     - govet
     - gosimple
-    - revive
     - gofmt
     - goimports
     - errcheck
@@ -28,13 +27,6 @@ linters:
 
 issues:
   exclude-use-default: false
-  exclude-rules:
-    - linters: ["staticcheck"]
-      text: "exported \\w+ should have comment or be unexported"
-    - linters: ["revive"]
-      text: "exported: exported function .+ should have comment or be unexported"
-    - linters: ["revive"]
-      text: "package-comments: should have a package comment"
   exclude-dirs:
     - vendor
     - third_party
