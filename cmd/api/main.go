@@ -11,5 +11,8 @@ func main() {
 
 	r.GET("/example", handler.ExampleHandler)
 
-	r.Run()
+	err := r.Run()
+	if err != nil {
+		panic(err)
+	}
 }
