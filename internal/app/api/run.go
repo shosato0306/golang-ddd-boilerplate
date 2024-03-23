@@ -1,12 +1,12 @@
-package main
+package api
 
 import (
-	"github.com/shosato0306/golang-ddd-boilerplate/internal/app/api/handler"
-
 	"github.com/gin-gonic/gin"
+
+	"github.com/shosato0306/golang-ddd-boilerplate/internal/app/api/handler"
 )
 
-func main() {
+func Run() {
 	r := gin.Default()
 
 	r.GET("/example", handler.ExampleHandler)
