@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mydb
+    environment:
+      MYSQL_DATABASE: 'myapp'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    volumes:
+      - mydb:/var/lib/mysql
+
+volumes:
+  mydb:
