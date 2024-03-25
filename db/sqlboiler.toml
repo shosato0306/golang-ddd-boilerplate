@@ -1,0 +1,17 @@
+pkgname = "dbmodels"
+output = "./internal/infrastructure/repository/dbmodels"
+wipe = true
+no-hooks = true
+no-tests = true
+add-enum-types = true
+struct-tag-casing = "camel"
+
+[mysql]
+  dbname  = "myapp"
+  host    = "localhost"
+  port    = 3306
+  user    = "root"
+  pass    = "password"
+  sslmode = "false"
+  blacklist = ["schema_migrations"]
+  

@@ -22,3 +22,6 @@ go.work
 
 # tmp directory
 tmp
+
+# env file
+.env
