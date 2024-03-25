@@ -6,15 +6,15 @@ import (
 	"github.com/shosato0306/golang-ddd-boilerplate/internal/usecase"
 )
 
-type ExampleHandler struct {
+type APIHandler struct {
 	userUseCase usecase.User
 }
 
-func NewExampleHandler(userUseCase usecase.User) *ExampleHandler {
-	return &ExampleHandler{userUseCase: userUseCase}
+func NewAPIHandler(userUseCase usecase.User) *APIHandler {
+	return &APIHandler{userUseCase: userUseCase}
 }
 
-func (h *ExampleHandler) GetUser(c *gin.Context) {
+func (h *APIHandler) GetUser(c *gin.Context) {
 	id := c.Param("id")
 	user, err := h.userUseCase.GetUser(c, id)
 	if err != nil {

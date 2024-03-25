@@ -6,7 +6,7 @@ func routing(d Dependency) error {
 	router := gin.Default()
 
 	router.GET("/user/:id", func(c *gin.Context) {
-		d.exampleHandler.GetUser(c)
+		d.apiHandler.GetUser(c)
 	})
 
 	err := router.Run(":8080")

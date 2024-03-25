@@ -5,11 +5,12 @@ import (
 	"database/sql"
 	"errors"
 
+	"github.com/volatiletech/sqlboiler/v4/boil"
+	"github.com/volatiletech/sqlboiler/v4/queries/qm"
+
 	"github.com/shosato0306/golang-ddd-boilerplate/internal/domain/model"
 	"github.com/shosato0306/golang-ddd-boilerplate/internal/domain/repository"
 	"github.com/shosato0306/golang-ddd-boilerplate/internal/infrastructure/repository/dbmodels"
-	"github.com/volatiletech/sqlboiler/v4/boil"
-	"github.com/volatiletech/sqlboiler/v4/queries/qm"
 )
 
 type user struct {

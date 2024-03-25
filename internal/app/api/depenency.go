@@ -7,7 +7,7 @@ import (
 )
 
 type Dependency struct {
-	exampleHandler *handler.ExampleHandler
+	apiHandler *handler.APIHandler
 }
 
 func (d *Dependency) Inject() {
@@ -15,5 +15,5 @@ func (d *Dependency) Inject() {
 
 	userUsecase := usecase.NewUser(userRepository)
 
-	d.exampleHandler = handler.NewExampleHandler(userUsecase)
+	d.apiHandler = handler.NewAPIHandler(userUsecase)
 }
