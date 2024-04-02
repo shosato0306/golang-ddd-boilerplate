@@ -4,7 +4,6 @@ wipe = true
 no-hooks = true
 no-tests = true
 add-enum-types = true
-struct-tag-casing = "camel"
 
 [mysql]
   dbname  = "myapp"
