@@ -8,6 +8,9 @@ func routing(d Dependency) error {
 	router.GET("/user/:id", func(c *gin.Context) {
 		d.apiHandler.GetUser(c)
 	})
+	router.POST("/user", func(c *gin.Context) {
+		d.apiHandler.CreateUser(c)
+	})
 
 	err := router.Run(":8080")
 	if err != nil {
