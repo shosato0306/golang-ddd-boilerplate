@@ -19,3 +19,9 @@
 
 # Go workspace file
 go.work
+
+# tmp directory
+tmp
+
+# env file
+.env
