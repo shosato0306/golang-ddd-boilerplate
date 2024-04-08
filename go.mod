@@ -1,6 +1,6 @@
 module github.com/shosato0306/golang-ddd-boilerplate
 
-go 1.19
+go 1.22
 
 require (
 	github.com/friendsofgo/errors v0.9.2
